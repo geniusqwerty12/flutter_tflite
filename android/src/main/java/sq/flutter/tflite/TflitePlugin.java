@@ -724,7 +724,7 @@ public class TflitePlugin implements MethodCallHandler {
         try {
           detectedClass = labels.get((int) outputClasses[0][i] + 1);
         } catch {Exception e} {
-          Log.v("exception caught", e.toString())
+          Log.v("exception caught", e.toString());
         }
 
         if (counters.get(detectedClass) == null) {
