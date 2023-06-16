@@ -680,7 +680,7 @@ public class TflitePlugin implements MethodCallHandler {
       //To fix this, we have to iterate through the tfLiteObjectRecognition.getOutputTensor elements and remap them
 
       for(int outputMapLocationIterator = 0; outputMapLocationIterator <= 3; outputMapLocationIterator++){
-        String thisTensorName = tflite.getOutputTensor(outputMapLocationIterator).name();
+        String thisTensorName = tfLite.getOutputTensor(outputMapLocationIterator).name();
         switch (thisTensorName) {
           case "StatefulPartitionedCall:3": {
             outputMap.put(outputMapLocationIterator, outputLocations);
